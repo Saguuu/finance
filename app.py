@@ -308,3 +308,5 @@ def add_cash():
         return redirect("/")
 
     return render_template("add-cash.html")
+
+    app.run()
