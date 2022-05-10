@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<div>
+    <table class="center">
+        <thead>
+            <tr>
+                <th>Stock</th>
+                <th>Amount</th>
+                <th>Price</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+            <tbody>
+                {% for info in portfolio %}
+                <tr>
+                    <td>{{ info[0] }} </td>
+                    <td>{{ info[1] }}</td>
+                    <td>{{ info[2] }}</td>
+                    <td>{{ info[3] }}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+    <table class="center">
+        <thead>
+            <tr>
+                <th>Buying Power</th>
+                <th>Account Value</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>{{ balance }}</td>
+                    <td>{{ total_value }}</td>
+                </tr>
+            </tbody>
+    </table>
+
+</div>
+{% endblock %}
